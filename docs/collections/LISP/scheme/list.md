@@ -39,9 +39,16 @@
 (define-struct pair (left right))
 ;define our cons
 (define (my-cons my-first my-rest)
-(cond
-  [(and (pair? my-rest) (empty? my-rest)) (error 'my-cons "the second value must be a cons")]
-[else (make-pair my-first my-rest)]))
+  (cond
+    [
+      (and (pair? my-rest) (empty? my-rest))
+      (error 'my-cons "the second value must be a cons")
+    ]
+    [
+      else (make-pair my-first my-rest)
+    ]
+  )
+)
 ```
 
 实际上就是定义一个函数，而 lisp 使可以将函数作为数据来进行操作的，因此函数 `my-cons` 也可以作为一个对象来进行操作
