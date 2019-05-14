@@ -2,9 +2,8 @@
 function findeLongestWordInStr (s, d) {
   if (s && s.length > 0 && d && d.length > 0) {
     let maxStr = '';
-    const sortedArr = sortLength(d)
-    for (let index = 0; index < sortedArr.length; index++) {
-      const element = sortedArr[index];
+    for (let index = 0; index < d.length; index++) {
+      const element = d[index];
       const isSub = compareStr(s, element);
       if (isSub) {
         if (maxStr.length < element.length) {
@@ -27,12 +26,6 @@ function compareStr(s, target) {
     return true;
   }
   return false;
-}
-
-function sortLength(d) {
-  if (d && d.length > 0) {
-    return d.sort((a, b) => b.length - a.length)
-  }
 }
 
 const s = findeLongestWordInStr("abppplee", ["able", "ale", "apple", "bale", "kangaroo"]);
