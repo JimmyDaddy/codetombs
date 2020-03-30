@@ -1,3 +1,3 @@
-# timetombs
+# codetombs
 
-The TimeTombs in Hyperion
+The CodeTombs in Hyperion
