@@ -1,6 +1,6 @@
 const EventEmitter = require('./event_emitter');
 
-const eventEmitter = new EventEmitter();
+const eventEmitter = new EventEmitter(10);
 
 eventEmitter.addListener('hello', (name) => {
   console.log('====================================');

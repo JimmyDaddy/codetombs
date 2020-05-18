@@ -1,8 +1,8 @@
 
 class EventEmitter {
-  constructor() {
+  constructor(maxListeners) {
     this.events = new Map();
-    this.maxListeners = 10;
+    this.maxListeners = maxListeners || 10;
   }
 
   _checkParams(event, listener) {
